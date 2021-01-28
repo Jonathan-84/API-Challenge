@@ -1,7 +1,19 @@
-* {
-    background-color: blue;
+.choice {
+  display: none;
 }
 
-#countdown {
-    color: white;
+.btn-primary {
+  margin: 10px auto;
+}
+
+.btn-secondary:hover {
+  background-color: pink;
+  border-color: pink;
+  color: white;    
+}
+
+.btn-secondary {
+  color: black;
+  background-color: white;
+  border-color: white;
 }
