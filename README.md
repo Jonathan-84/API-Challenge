@@ -26,6 +26,8 @@
   As noted above, visit: https://jonathan-84.github.io/API-Test/. Click Begin! and you are off.
 
   ## Images
+  ![Main](https://raw.githubusercontent.com/Jonathan-84/API-Test/master/assets/images/Screenshot%202021-01-29%20141652.jpg)
+   ![High Scores](https://raw.githubusercontent.com/Jonathan-84/API-Test/master/assets/images/Screenshot%202021-01-29%20142048.jpg)
 
   ## Test
 
