@@ -20,9 +20,9 @@ var questions = [
         answer: "quotes"
     },
     {
-        title: "What useful tool is used during development and debugging in browser:",
-        choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
-        answer: "console.log"
+        title: "What does CSS stand for:",
+        choices: ["Cascading Style Sheets", "Cool Styling Stuff", "Coding Science Sheets", "Cascading Style Syntax"],
+        answer: "Cascading Style Sheets"
     }
   ];
   
@@ -45,7 +45,7 @@ var questions = [
     var choice2 = document.querySelector("#choice2");
     var choice3 = document.querySelector("#choice3");
     var choice4 = document.querySelector("#choice4");
-    var answers = ["alerts", "GitHub", "all of the above", "quotes", "console.log"]
+    var answers = ["alerts", "GitHub", "all of the above", "quotes", "Cascading Style Sheets"]
     var gameState;
     var rightOrWrong = document.getElementById("rightwrong");
     var highScores = JSON.parse(localStorage.getItem("scores") || "[]");
@@ -54,7 +54,6 @@ var questions = [
     startBtn.addEventListener("click", function (event) {
         event.preventDefault;
         startTimer();
-        console.log(gameState);
     })
   
     clearBtn.addEventListener("click", function (event) {
@@ -132,7 +131,7 @@ var questions = [
         saveHighScore();
         timerDisplay.textContent = 0;
         timerSet();
-        alert("Game over!")
+        alert("You're done! Check out the High Scores to see how you did.")
         rightOrWrong.textContent = "";
         startBtn.setAttribute("style", "display:block")
         startBtn.textContent = "Can you beat that?";
@@ -142,7 +141,6 @@ var questions = [
         gameTitle.textContent = "Coding Quiz Challenge!";
         questionText.textContent = "Ok Hot Shot! You've got 60 seconds select the right answer to these coding questions. Careful though, if you are wrong you will lose 10 seconds.";
         choices.setAttribute("style", "display:none");
-        console.log("page reset");
     }
   
     function beginGame() {
@@ -156,7 +154,6 @@ var questions = [
     }
   
     function questionFill() {
-        console.log("I'm here!");
         questionText.textContent = questions[questionNum].title;
     }
   
@@ -191,10 +188,7 @@ var questions = [
     function saveHighScore() {
         var userName = prompt("Enter your initials!");
         var timeScore = (60 - timeRemaining);
-        console.log(userName);
-        console.log(timeScore);
         highScores.push([userName, timeScore]);
-        console.log(highScores);
         localStorage.setItem("scores", JSON.stringify(highScores));
         populateScores();
     }
